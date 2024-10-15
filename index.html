@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Record Keeper</h1>
+        <p>Register students and manage their information</p>
+    </header>
+
+    <section class="form-section">
+        <h2>Register a Student</h2>
+        <form id="studentForm">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" required>
+            
+            <label for="studentId">Student ID:</label>
+            <input type="number" id="studentId" name="studentId" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="contact">Contact No:</label>
+            <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" title="Only 10 digits allowed" required>
+
+            <button type="submit">Add Student</button>
+        </form>
+    </section>
+
+    <section class="display-section">
+        <h2>Registered Students</h2>
+        <div class="table-container"> <!-- Added container for scrolling -->
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Email ID</th>
+                        <th>Contact No</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Student records will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
